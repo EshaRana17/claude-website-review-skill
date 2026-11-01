@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+  Sample landing page for testing scripts/page_audit.py.
+  Fictional business. It contains deliberate problems:
+  missing lang, viewport that blocks zoom, missing meta description,
+  images without alt or dimensions, unlabeled fields, a skipped heading level,
+  several external scripts, and a weak "Submit" button.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Fernway Mobile Dog Grooming</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://analytics.example.com/tag.js"></script>
+  <script src="https://cdn.example-chat.com/widget.js" async></script>
+  <script src="//heatmap.example.net/rec.js"></script>
+  <script src="js/site.js" defer></script>
+  <script>window.dataLayer = window.dataLayer || [];</script>
+</head>
+<body>
+  <header>
+    <a href="/"><img src="logo.png"></a>
+    <nav>
+      <a href="/services">Services</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a class="btn btn-primary" href="/book">Book a groom</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Welcome to Fernway</h1>
+      <p>We are passionate about pets.</p>
+      <img src="hero.jpg" alt="Groomer drying a spaniel inside the Fernway van">
+      <a class="cta" href="/book">Get my free quote</a>
+    </section>
+
+    <section>
+      <h2>Our services</h2>
+      <h4>Full groom</h4>
+      <p>Bath, dry, cut and nails.</p>
+      <img src="full-groom.jpg" alt="" width="600" height="400" loading="lazy">
+      <h4>Puppy intro</h4>
+      <p>A gentle first visit.</p>
+    </section>
+
+    <section>
+      <h2>Request a callback</h2>
+      <form action="/callback" method="post">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name">
+
+        <input id="phone" name="phone" type="tel" placeholder="Phone number">
+
+        <label>Dog's breed
+          <input name="breed" type="text">
+        </label>
+
+        <select name="size">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+
+        <input type="hidden" name="source" value="homepage">
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Questions?</h2>
+      <p>Call us on <a href="tel:+440000000000">0000 000 000</a> or
+         <a href="mailto:hello@example.com">email us</a>.</p>
+      <iframe src="map.html" width="400" height="300"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/privacy">Privacy</a>
+    <img src="badge.svg" width="80">
+  </footer>
+</body>
+</html>
