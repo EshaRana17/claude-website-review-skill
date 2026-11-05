@@ -132,7 +132,7 @@ or real-world speed.
 - **No secrets or environment variables.** `agent.json` declares `"network": []`
   and `"env": []`.
 - **No hidden instructions.** All behaviour is in readable Markdown and one Python file.
-- Scanned on AgenticMart: https://agenticmart.vercel.app/verified
+- Scanned on AgenticMart: https://agenticmart.org/verified
 
 ## Standards this skill is based on
 
